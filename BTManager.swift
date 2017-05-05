@@ -182,7 +182,6 @@ class BTManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         
         let data:Data = characteristic.value!
         print(NSString(data: data, encoding: String.Encoding.utf8.rawValue) ?? "FUCK")
-        
     }
     
     func writePosition(_ position: String) {

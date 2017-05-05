@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09005B1B1EBCDCAE00660C16 /* EstadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09005B1A1EBCDCAE00660C16 /* EstadoViewController.swift */; };
+		09005B1E1EBCE63100660C16 /* BTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09005B1D1EBCE63100660C16 /* BTManager.swift */; };
+		09005B201EBCE68500660C16 /* BTDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09005B1F1EBCE68500660C16 /* BTDelegate.swift */; };
+		09005B241EBCE81000660C16 /* EmparejarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09005B231EBCE81000660C16 /* EmparejarTableViewController.swift */; };
+		09005B271EBCE87900660C16 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09005B261EBCE87900660C16 /* CoreBluetooth.framework */; };
 		09C0D5261EB8DA80008C8D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0D5251EB8DA80008C8D65 /* AppDelegate.swift */; };
 		09C0D5281EB8DA80008C8D65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0D5271EB8DA80008C8D65 /* ViewController.swift */; };
 		09C0D52B1EB8DA80008C8D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C0D5291EB8DA80008C8D65 /* Main.storyboard */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09005B1A1EBCDCAE00660C16 /* EstadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadoViewController.swift; sourceTree = "<group>"; };
+		09005B1D1EBCE63100660C16 /* BTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
+		09005B1F1EBCE68500660C16 /* BTDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDelegate.swift; sourceTree = "<group>"; };
+		09005B231EBCE81000660C16 /* EmparejarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmparejarTableViewController.swift; sourceTree = "<group>"; };
+		09005B261EBCE87900660C16 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		09C0D5221EB8DA80008C8D65 /* RopaTrabajo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RopaTrabajo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09C0D5251EB8DA80008C8D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09C0D5271EB8DA80008C8D65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09005B271EBCE87900660C16 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,13 +87,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09005B1C1EBCE61D00660C16 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				09005B1D1EBCE63100660C16 /* BTManager.swift */,
+				09005B1F1EBCE68500660C16 /* BTDelegate.swift */,
+			);
+			name = BLE;
+			sourceTree = "<group>";
+		};
+		09005B251EBCE87900660C16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09005B261EBCE87900660C16 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		09C0D5191EB8DA7F008C8D65 = {
 			isa = PBXGroup;
 			children = (
+				09005B1C1EBCE61D00660C16 /* BLE */,
 				09C0D5241EB8DA80008C8D65 /* RopaTrabajo */,
 				09C0D53C1EB8DA80008C8D65 /* RopaTrabajoTests */,
 				09C0D5471EB8DA80008C8D65 /* RopaTrabajoUITests */,
 				09C0D5231EB8DA80008C8D65 /* Products */,
+				09005B251EBCE87900660C16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +131,11 @@
 			children = (
 				09C0D5251EB8DA80008C8D65 /* AppDelegate.swift */,
 				09C0D5271EB8DA80008C8D65 /* ViewController.swift */,
+				09005B1A1EBCDCAE00660C16 /* EstadoViewController.swift */,
+				09005B231EBCE81000660C16 /* EmparejarTableViewController.swift */,
 				09C0D5291EB8DA80008C8D65 /* Main.storyboard */,
-				09C0D52F1EB8DA80008C8D65 /* Assets.xcassets */,
 				09C0D5311EB8DA80008C8D65 /* LaunchScreen.storyboard */,
+				09C0D52F1EB8DA80008C8D65 /* Assets.xcassets */,
 				09C0D5341EB8DA80008C8D65 /* Info.plist */,
 				09C0D52C1EB8DA80008C8D65 /* RopaTrabajo.xcdatamodeld */,
 			);
@@ -265,8 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09005B1E1EBCE63100660C16 /* BTManager.swift in Sources */,
+				09005B1B1EBCDCAE00660C16 /* EstadoViewController.swift in Sources */,
 				09C0D5281EB8DA80008C8D65 /* ViewController.swift in Sources */,
+				09005B241EBCE81000660C16 /* EmparejarTableViewController.swift in Sources */,
 				09C0D5261EB8DA80008C8D65 /* AppDelegate.swift in Sources */,
+				09005B201EBCE68500660C16 /* BTDelegate.swift in Sources */,
 				09C0D52E1EB8DA80008C8D65 /* RopaTrabajo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +552,7 @@
 				09C0D54F1EB8DA80008C8D65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09C0D5501EB8DA80008C8D65 /* Build configuration list for PBXNativeTarget "RopaTrabajoTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +561,7 @@
 				09C0D5521EB8DA80008C8D65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09C0D5531EB8DA80008C8D65 /* Build configuration list for PBXNativeTarget "RopaTrabajoUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +570,7 @@
 				09C0D5551EB8DA80008C8D65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

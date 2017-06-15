@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pdq-ga-7Ty">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pdq-ga-7Ty">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -109,7 +109,6 @@
         <!--Estado-->
         <scene sceneID="c3a-GB-egx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cy3-9h-1hg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ato-59-zYe" customClass="EstadoViewController" customModule="RopaTrabajo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rBS-mo-TTX"/>
@@ -119,44 +118,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parado" translatesAutoresizingMaskIntoConstraints="NO" id="uNl-9E-9kD">
-                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqM-Cq-TZ5">
+                                <rect key="frame" x="147.5" y="188.5" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="9Gj-Jx-Xj9"/>
-                                    <constraint firstAttribute="width" constant="200" id="MOT-5z-7ck"/>
+                                    <constraint firstAttribute="height" constant="80" id="g7Y-S8-CIy"/>
+                                    <constraint firstAttribute="width" constant="80" id="i1L-FP-dBK"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlO-BL-RoW">
-                                <rect key="frame" x="118" y="518" width="138" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="K39-H3-MSY"/>
-                                    <constraint firstAttribute="width" constant="138" id="noe-D5-yhb"/>
-                                </constraints>
-                                <state key="normal" title="Prendo la Luz :v">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Button" image="subir"/>
                                 <connections>
-                                    <action selector="clicPrender:" destination="ato-59-zYe" eventType="touchUpInside" id="aU2-cd-ygC"/>
+                                    <action selector="clicSubir:" destination="ato-59-zYe" eventType="touchUpInside" id="DeO-jE-QAj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vl-ef-L5k">
+                                <rect key="frame" x="42.5" y="293.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="SPi-Si-Akk"/>
+                                    <constraint firstAttribute="height" constant="80" id="iAX-L4-pHa"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="pause"/>
+                                <connections>
+                                    <action selector="clicPause:" destination="ato-59-zYe" eventType="touchUpInside" id="H7d-w9-zeR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNo-Cl-dfX">
+                                <rect key="frame" x="252.5" y="293.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="H4q-Jf-1f6"/>
+                                    <constraint firstAttribute="width" constant="80" id="liR-sC-AHR"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cambiar"/>
+                                <connections>
+                                    <action selector="clicCambiarSentido:" destination="ato-59-zYe" eventType="touchUpInside" id="zIA-NH-Yc8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7V-3T-cdV">
+                                <rect key="frame" x="147.5" y="293.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fuf-RX-Mwo"/>
+                                    <constraint firstAttribute="width" constant="80" id="nLA-y1-cis"/>
+                                </constraints>
+                                <state key="normal" image="seguir"/>
+                                <connections>
+                                    <action selector="clicPlay:" destination="ato-59-zYe" eventType="touchUpInside" id="UQd-Lw-Hpa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CA2-Qp-dEB">
+                                <rect key="frame" x="147.5" y="398.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="dhp-ip-LdP"/>
+                                    <constraint firstAttribute="height" constant="80" id="eEg-cl-Ou0"/>
+                                </constraints>
+                                <state key="normal" image="bajar"/>
+                                <connections>
+                                    <action selector="clicBajar:" destination="ato-59-zYe" eventType="touchUpInside" id="hvr-QR-Eht"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="UlO-BL-RoW" firstAttribute="centerX" secondItem="pMM-C1-ctq" secondAttribute="centerX" id="4G8-1W-HeH"/>
-                            <constraint firstItem="lW7-qL-7FA" firstAttribute="top" secondItem="UlO-BL-RoW" secondAttribute="bottom" constant="119" id="4p6-Nl-sU4"/>
-                            <constraint firstItem="UlO-BL-RoW" firstAttribute="top" secondItem="uNl-9E-9kD" secondAttribute="bottom" constant="84.5" id="QeY-Wk-wPj"/>
-                            <constraint firstItem="uNl-9E-9kD" firstAttribute="centerX" secondItem="pMM-C1-ctq" secondAttribute="centerX" id="UBB-Mb-Kfk"/>
-                            <constraint firstItem="uNl-9E-9kD" firstAttribute="centerY" secondItem="pMM-C1-ctq" secondAttribute="centerY" id="a3V-Fh-ifg"/>
+                            <constraint firstItem="hNo-Cl-dfX" firstAttribute="centerY" secondItem="pMM-C1-ctq" secondAttribute="centerY" id="3Pl-ey-C3q"/>
+                            <constraint firstItem="Z7V-3T-cdV" firstAttribute="top" secondItem="dqM-Cq-TZ5" secondAttribute="bottom" constant="25" id="3oX-W0-gup"/>
+                            <constraint firstItem="dqM-Cq-TZ5" firstAttribute="centerX" secondItem="pMM-C1-ctq" secondAttribute="centerX" id="Cqk-F2-0Fu"/>
+                            <constraint firstItem="7vl-ef-L5k" firstAttribute="centerY" secondItem="pMM-C1-ctq" secondAttribute="centerY" id="Lc7-e3-Asj"/>
+                            <constraint firstItem="CA2-Qp-dEB" firstAttribute="centerX" secondItem="pMM-C1-ctq" secondAttribute="centerX" id="V9a-D4-lmd"/>
+                            <constraint firstItem="Z7V-3T-cdV" firstAttribute="leading" secondItem="7vl-ef-L5k" secondAttribute="trailing" constant="25" id="dmX-0m-daP"/>
+                            <constraint firstItem="hNo-Cl-dfX" firstAttribute="leading" secondItem="Z7V-3T-cdV" secondAttribute="trailing" constant="25" id="jco-ld-JyJ"/>
+                            <constraint firstItem="CA2-Qp-dEB" firstAttribute="top" secondItem="Z7V-3T-cdV" secondAttribute="bottom" constant="25" id="lpe-pX-Bue"/>
+                            <constraint firstItem="Z7V-3T-cdV" firstAttribute="centerX" secondItem="pMM-C1-ctq" secondAttribute="centerX" id="skl-E2-uY4"/>
+                            <constraint firstItem="Z7V-3T-cdV" firstAttribute="centerY" secondItem="pMM-C1-ctq" secondAttribute="centerY" id="vcr-u7-cpB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Estado" id="GV5-2M-oc1">
                         <barButtonItem key="backBarButtonItem" title="atras" id="5pm-cv-huJ"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="btnPrender" destination="UlO-BL-RoW" id="bMA-qh-w2S"/>
-                        <outlet property="imgEstado" destination="uNl-9E-9kD" id="EPi-zu-ucn"/>
-                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cy3-9h-1hg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1767" y="45"/>
         </scene>
@@ -165,7 +201,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pdq-ga-7Ty" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" misplaced="YES" id="z4V-EF-6vs">
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" id="z4V-EF-6vs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.94509803921568625" green="0.3529411764705882" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
@@ -182,8 +218,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bajar" width="206" height="206"/>
+        <image name="cambiar" width="206" height="206"/>
         <image name="navmenuicon" width="40" height="40"/>
-        <image name="parado" width="692" height="692"/>
+        <image name="pause" width="206" height="206"/>
+        <image name="seguir" width="206" height="206"/>
+        <image name="subir" width="206" height="206"/>
         <image name="worker2" width="1080" height="1920"/>
     </resources>
 </document>

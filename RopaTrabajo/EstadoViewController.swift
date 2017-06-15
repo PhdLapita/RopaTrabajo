@@ -10,8 +10,7 @@ import UIKit
 
 class EstadoViewController: UIViewController {
   let bluetoothManager = BTManager.getInstance()
-    @IBOutlet weak var imgEstado: UIImageView!
-    @IBOutlet weak var btnPrender: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +24,33 @@ class EstadoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     var contador : Int = 0
-    @IBAction func clicPrender(_ sender: UIButton) {
+    
+    @IBAction func clicSubir(_ sender: UIButton) {
+         bluetoothManager.writePosition("1")
+         print("1")
+    }
+    
+    @IBAction func clicBajar(_ sender: UIButton) {
+         bluetoothManager.writePosition("0")
+         print("0")
+    }
+    
+    @IBAction func clicPlay(_ sender: UIButton) {
+         bluetoothManager.writePosition("4")
+         print("4")
+    }
+    
+    @IBAction func clicCambiarSentido(_ sender: UIButton) {
+         bluetoothManager.writePosition("3")
+         print("3")
+    }
+    
+    @IBAction func clicPause(_ sender: UIButton) {
+         bluetoothManager.writePosition("2")
+         print("2")
+    }
+    
+   /* @IBAction func clicPrender(_ sender: UIButton) {
         if(contador == 0){
         bluetoothManager.writePosition("y")
         }else{
@@ -33,7 +58,7 @@ class EstadoViewController: UIViewController {
         }
         }
     
-
+*/
     /*
     // MARK: - Navigation
 
